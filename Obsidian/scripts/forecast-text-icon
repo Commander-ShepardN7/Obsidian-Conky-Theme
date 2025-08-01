@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Commander-ShepardN7 → Based on Closebox73's weather-text-icon script
+# Shows tomorrow's weather icon using Feather icon font
+# Requires ~/.cache/weather_tomorrow.json created by the forecast script
+
+ICON_01D=""
+ICON_01N=""
+ICON_02=""
+ICON_09=""
+ICON_10=""
+ICON_11=""
+ICON_13=""
+ICON_50=""
+NO_DATA=""
+
+# Read icon code from tomorrow's forecast JSON
+WEATHER_ICON=$(jq -r '.icon' "$HOME/.cache/weather_tomorrow.json")
+
+case "$WEATHER_ICON" in
+    *01d*) echo "$ICON_01D" ;;
+    *01n*) echo "$ICON_01N" ;;
+    *02d*|*02n*|*03d*|*03n*|*04d*|*04n*) echo "$ICON_02" ;;
+    *09d*|*09n*) echo "$ICON_09" ;;
+    *10d*|*10n*) echo "$ICON_10" ;;
+    *11d*|*11n*) echo "$ICON_11" ;;
+    *13d*|*13n*) echo "$ICON_13" ;;
+    *50d*|*50n*) echo "$ICON_50" ;;
+    *) echo "$NO_DATA" ;;
+esac
+
+exit
+
