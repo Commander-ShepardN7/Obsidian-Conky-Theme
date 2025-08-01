@@ -43,6 +43,8 @@ You'll need to manually set some stuff
 
 3. Weather and forecast: go to OpenWeathermap.org to get your API Key and cityID and fill ```weather-v2.0.sh``` and ```forecast.sh``` scripts with them.
 
+4. Launchers: each icon is a launcher. Click them to open Google Calendar, empty trash using ```trash-cli```, open a given directory (```~/.config/conky``` by default) and go to YouTube, Reddit or Instagram. Change them to suit your needs! There's a ```.xfc``` file for you to edit the icons.
+
 - Obsidian Mail
 1. You need ```Calcurse``` to display calendar events.
 
