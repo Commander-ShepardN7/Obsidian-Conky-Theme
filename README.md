@@ -36,6 +36,8 @@ You'll need to manually set some stuff
 - Obsidian Sys
 1. In the ```bars.lua``` script, change your network address with your own (run ```ip addr show``` on the terminal)
 
+2. Change the network name for upspeed and downspeed graphs: run ```ip addr show``` on the terminal to get your IP. The value you're looking for usually goes something like "wlx000000000000"
+
 - Obsidian: 
 1. Spotify cover art: in the ```fetch-art2``` script you'll find that you can add album covers of manually downloaded music in the ```data``` directory. Name the images as instructed in the script. 
 
